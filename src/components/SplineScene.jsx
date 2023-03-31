@@ -38,6 +38,7 @@ export default function SplineScene() {
 				display: "flex",
 				justifyContent: "center",
 				pointerEvents: "none",
+				zIndex: 9,
 			}}
 		>
 			<Canvas
@@ -55,7 +56,9 @@ export default function SplineScene() {
 function Scene({ scroll, ...props }) {
 	const [distanceX, setDistanceX] = useState(0);
 	const [distanceY, setDistanceY] = useState(0);
-	const [horizontalScale, setHorizontalScale] = useState(1);
+	const [horizontalScale, setHorizontalScale] = useState(
+		window.innerWidth / 1380
+	);
 	const [wink, setWink] = useState(false);
 
 	const eyeRightRef = useRef();

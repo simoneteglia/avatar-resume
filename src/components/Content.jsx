@@ -9,9 +9,22 @@ export default function Content({
 	return (
 		<div style={{ zIndex: 10 }}>
 			<div
+				id="filler"
+				style={{
+					height: "200vh",
+					width: "100vw",
+					display: "flex",
+					flexDirection: "column",
+					justifyContent: "center",
+					alignItems: "center",
+					fontSize: "40px",
+					fontFamily: "Dongle-Regular",
+					textAlign: "center",
+				}}
+			></div>
+			<div
 				id="whoami"
 				style={{
-					marginTop: "100%",
 					height: "100vh",
 					width: "100vw",
 					display: "flex",
