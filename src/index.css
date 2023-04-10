@@ -36,12 +36,8 @@
 
 body {
 	margin: 0;
-	display: flex;
-	place-items: center;
 	min-width: 320px;
 	min-height: 750px;
-	color: #000;
-	height: 300vh;
 	transition: all 0.5s ease-in-out;
 }
 

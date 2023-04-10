@@ -41,11 +41,13 @@ function App() {
 					cursorDotRef={cursorDotRef}
 					handleMouseHoverClickable={handleMouseHoverClickable}
 					handleMouseLeaveClickable={handleMouseLeaveClickable}
+					windowSize={windowSize}
 				/>
-				<SplineScene />
+				<SplineScene windowSize={windowSize} />
 				<Content
 					handleMouseHoverClickable={handleMouseHoverClickable}
 					handleMouseLeaveClickable={handleMouseLeaveClickable}
+					windowSize={windowSize}
 				/>
 				<CustomCursor
 					setCursorCircleRef={setCursorCircleRef}
@@ -56,30 +58,12 @@ function App() {
 	} else {
 		return (
 			<>
-				<div
-					style={{
-						position: "fixed",
-						top: 0,
-						left: 0,
-						width: "100vw",
-						height: "100vh",
-						display: "grid",
-						placeItems: "center",
-					}}
-				>
-					<p
-						style={{
-							fontFamily: "Aurora",
-							fontSize: "30px",
-							textAlign: "center",
-						}}
-					>
-						Please open this website <br /> on a larger screen
-					</p>
-				</div>
-				<CustomCursor
-					setCursorCircleRef={setCursorCircleRef}
-					setCursorDotRef={setCursorDotRef}
+				<Navbar windowSize={windowSize} />
+				<SplineScene windowSize={windowSize} />
+				<Content
+					handleMouseHoverClickable={handleMouseHoverClickable}
+					handleMouseLeaveClickable={handleMouseLeaveClickable}
+					windowSize={windowSize}
 				/>
 			</>
 		);
